@@ -1,0 +1,65 @@
+﻿@model List<MvcWebDemo.Models.ViewModel.StudentViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<div class="clearfix form-actions">
+    <div class="col-md-offset-5 col-md-9">
+        <button class="btn" type="button" onclick="location.href='@Url.Action("Create")'">
+            <i class="ace-icon fa fa-reply icon-only"></i>
+            新增
+        </button>
+    </div>
+</div>
+<div class="box-body">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().NAME)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().ADDRESS)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().EMAIL)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().TEL)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.First().MESSAGE)
+                </th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ADDRESS)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EMAIL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TEL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MESSAGE)
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
