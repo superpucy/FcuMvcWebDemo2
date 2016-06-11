@@ -10,13 +10,6 @@
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
     <div class="form-group">
-        @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "col-sm-3 control-label no-padding-right" })
-        <div class="col-sm-9">
-            @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "col-xs-10 col-sm-5" } })
-            @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
         @Html.LabelFor(model => model.NAME, htmlAttributes: new { @class = "col-sm-3 control-label no-padding-right" })
         <div class="col-sm-9">
             @Html.EditorFor(model => model.NAME, new { htmlAttributes = new { @class = "col-xs-10 col-sm-5" } })
